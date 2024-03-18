@@ -14,10 +14,7 @@ func main() {
     
     filename := os.Args[1]
 
-    fileData, err := os.ReadFile(filename)
-    if err != nil {panic(err)}
-
-    cid := cid_local.Cid(fileData)
+    cid := cid_local.Cid(filename)
     fmt.Println(cid)
 }
 
